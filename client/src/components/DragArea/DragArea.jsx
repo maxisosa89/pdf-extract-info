@@ -8,7 +8,7 @@ export default function DragArea() {
 
     useEffect(() => {
         if (pdfUrl) {
-            fetch("http://localhost:3001/", pdfUrl).then(response => {
+            fetch("https://pdf-extract-info.herokuapp.com/", pdfUrl).then(response => {
                 response.json().then(e => {
                     setDataPdf(e)
                 })
